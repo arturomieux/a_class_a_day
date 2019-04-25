@@ -9,6 +9,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1><%= SITE_TITLE %></h1>
+      <section class="user-menu">
+        User Menu
+      </section>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
