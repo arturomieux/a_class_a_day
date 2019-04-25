@@ -1,0 +1,1 @@
+SITE_TITLE = 'Ruby, a class* a day'.freeze
