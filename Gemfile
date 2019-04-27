@@ -41,6 +41,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'guard'
   gem 'guard-minitest'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
