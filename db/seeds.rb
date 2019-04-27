@@ -6,7 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Post.create(title: 'First post',
-            content: 'Lorem Ipsum')
-Post.create(title: 'Second post',
-            content: 'Lorem Ipsum')
+FactoryBot::create_list(:post, 8)
