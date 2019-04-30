@@ -8,34 +8,32 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="bg-light">
     <header>
-      <section class="container-fluid bg-dark">
+      <section class="container-fluid bg-dark sticky-top">
         <div class="row pl-5 pt-2">
-          <h1 class="display-3 text-white">
+          <h1 class="display-4 text-white">
             <%= SITE_TITLE %>
           </h1>
         </div>
-        <div class="row pl-5 text-light">
-          <h5><em>
+        <div class="row pl-5 text-muted font-weight-light">
+          <h6><em>
             * Or a method, trick, concept, library, or something else.
-          </em></h5>
-        </div>
-        <div class="row bg-secondary pl-5 py-3">
-          <div class="col-8">
-          <h4 class="text-white">A daylish blog about the never-ending quest of knowing more about the things I use to make things.
-          </h4>
-          </div>
+          </em></h6>
         </div>
       </section>
-      <section class="user-menu">
-        User Menu
-      </section>
+      <div class="d-flex justify-content-around mx-4 px-3">
+        <section class="col-8 bg-secondary p-3 rounded-bottom mx-2">
+          <h5 class="text-white font-weight-light">
+            A daylish blog about the never-ending quest of knowing more about the things I use to make things.
+          </h5>
+        </section>
+        <section class="col-4 bg-white p-3 rounded-bottom mx-2">
+            User Menu
+        </section>
     </header>
-    <main>
-      <div class="container">
-        <%= yield %>
-      </div>
+    <main class="container">
+      <%= yield %>
     </main>
   </body>
 </html>

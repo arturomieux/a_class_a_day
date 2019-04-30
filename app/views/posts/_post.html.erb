@@ -1,4 +1,13 @@
-<article>
-  <h1><%= post.title %></h1>
-  <p><%= post.description %></p>
+<article class="bg-white px-2 py-2 my-3 text-justify rounded-lg">
+  <header class="row p-2">
+    <div class="col-9">
+      <h2 class="text-dark font-weight-light"><%= post.title %></h2>
+    </div>
+    <div class="col-3 text-right">
+      <%= post.created_at %>
+    </div>
+  </header>
+    <main class="col-12">
+      <p><%= post.description %></p>
+    </main>
 </article>
