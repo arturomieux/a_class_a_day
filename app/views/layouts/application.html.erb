@@ -10,13 +10,32 @@
 
   <body>
     <header>
-      <h1><%= SITE_TITLE %></h1>
+      <section class="container-fluid bg-dark">
+        <div class="row pl-5 pt-2">
+          <h1 class="display-3 text-white">
+            <%= SITE_TITLE %>
+          </h1>
+        </div>
+        <div class="row pl-5 text-light">
+          <h5><em>
+            * Or a method, trick, concept, library, or something else.
+          </em></h5>
+        </div>
+        <div class="row bg-secondary pl-5 py-3">
+          <div class="col-8">
+          <h4 class="text-white">A daylish blog about the never-ending quest of knowing more about the things I use to make things.
+          </h4>
+          </div>
+        </div>
+      </section>
       <section class="user-menu">
         User Menu
       </section>
     </header>
     <main>
-      <%= yield %>
+      <div class="container">
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>
