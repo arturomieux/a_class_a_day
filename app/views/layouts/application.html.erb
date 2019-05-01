@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title><%= SITE_TITLE %></title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body class="bg-light">
+
     <header>
-      <section class="container-fluid bg-dark sticky-top">
-        <div class="row pl-5 pt-2">
-          <h1 class="display-4 text-white">
-            <%= SITE_TITLE %>
-          </h1>
+
+      <section class="container-fluid bg-danger sticky-top">
+
+        <div class="row pl-5 pr-1 pt-2">
+
+          <section class="title col-10">
+            <h1 class="display-4 text-white">
+              <%= SITE_TITLE %>
+            </h1>
+          </section>
+
+          <section class="user-menu text-white col-2">
+            User Menu
+          </section>
+
         </div>
-        <div class="row pl-5 text-muted font-weight-light">
-          <h6><em>
-            * Or a method, trick, concept, library, or something else.
-          </em></h6>
+
+        <div class="row pl-5 text-light font-weight-light">
+          <h6><em>* Or a method, trick, concept, library, or something else.</em></h6>
+        </div>
+
+      </section>
+
+      <section class="row bg-secondary p-3 rounded-bottom ml-5 mr-5">
+        <div class="col-7 text-white font-weight-light">
+        <h5>
+          A daylish blog about the never-ending quest of knowing more about the things I use to make things.
+        </h5>
+        <h6>- by Art Mieussens</h6>
+        </div>
+        <div class="col-1">
+          <%= image_tag 'art-nobkg.png' %>
         </div>
       </section>
-      <div class="d-flex justify-content-around mx-4 px-3">
-        <section class="col-8 bg-secondary p-3 rounded-bottom mx-2">
-          <h5 class="text-white font-weight-light">
-            A daylish blog about the never-ending quest of knowing more about the things I use to make things.
-          </h5>
-        </section>
-        <section class="col-4 bg-white p-3 rounded-bottom mx-2">
-            User Menu
-        </section>
+
     </header>
+
     <main class="container">
       <%= yield %>
     </main>
+
   </body>
+
 </html>
