@@ -7,6 +7,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
 
   <body class="bg-light">
@@ -23,9 +24,11 @@
             </h1>
           </section>
 
-          <section class="user-menu text-white col-2">
-            User Menu
-          </section>
+         <section class="user-menu text-white col-2 p-3">
+            <a href="#" class="text-white">
+              Log In <i class="fas fa-sign-in-alt"></i>
+            </a>
+          </section> 
 
         </div>
 
@@ -35,21 +38,36 @@
 
       </section>
 
-      <section class="row bg-secondary p-3 pt-4 rounded-bottom ml-5 mr-5">
-        <div class="col-10 text-white">
-        <h5 class="font-weight-light">
-          A daylish blog about the never-ending quest of knowing more about the things I use to make things.
-        </h5>
-        <h6 class="font-weight-light">- by Art Mieussens</h6>
-        </div>
-        <div class="col-2">
-          <%= image_tag 'art-nobkg.png', size: "100x100" %>
+      <section class="container">
+        <div class="row bg-secondary rounded p-3">
+
+          <div class="col-10 bg-secondary text-white">
+            <h5 class="font-weight-light">
+              A daylish blog about the never-ending quest of knowing more about the things I use to make things.
+            </h5>
+            <h6 class="font-weight-light">- by Art Mieussens</h6>
+          </div>
+
+          <div class="col-2 bg-secondary text-right">
+            <%= image_tag 'art-nobkg.png', size: "100x100" %>
+          </div>
+
         </div>
       </section>
 
     </header>
 
     <main class="container">
+
+      <section class="col input-group mt-3">
+        <input class="form-control" type="text">
+        <div class="input-group-append">
+          <div class="input-group-text">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+      </section>
+
       <%= yield %>
     </main>
 
