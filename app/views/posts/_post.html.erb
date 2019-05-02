@@ -1,13 +1,13 @@
-<article class="bg-white px-2 py-2 my-3 text-justify rounded-lg">
+<article class="bg-white text-dark px-2 py-2 my-3 rounded-lg">
   <header class="row p-2">
     <div class="col-9">
-      <h2 class="text-dark font-weight-light"><%= post.title %></h2>
+      <h2 class="font-weight-light"><%= post.title %></h2>
     </div>
     <div class="col-3 text-right">
       <%= post.created_at %>
     </div>
   </header>
-  <main class="col-12">
+  <main class="col-12 text-justify">
     <p><%= post.description %></p>
   </main>
   <div class="text-right pr-2 pb-2">
