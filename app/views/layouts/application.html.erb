@@ -16,13 +16,13 @@
 
       <section class="container-fluid bg-danger sticky-top">
 
-        <div class="row pl-5 pr-1 pt-2 text-white">
+        <div class="row px-5 pt-2 text-white">
           <h1>
             <%= SITE_TITLE %>
           </h1>
         </div>
 
-        <div class="row pl-5">
+        <div class="row px-5">
           <h6 class="text-light">
             <em>
               * Or a method, trick, concept, library, or something else.
@@ -33,17 +33,17 @@
       </section>
 
       <section class="container">
-        <div class="row bg-secondary rounded p-3">
+        <div class="row bg-secondary rounded-bottom">
 
-          <div class="col bg-secondary text-light font-weight-light">
+          <div class="col text-light font-weight-light p-3">
             <h6>
               A daylish blog about the never-ending quest of knowing more about the things I use to make things.
             </h4>
-            <h6>- by Art Mieussens</h6>
+            <h6>- by Art Mieussens <button class="btn"><i class="fas fa-envelope"></i></button></h6>
           </div>
 
-          <div class="col-2 bg-secondary text-right">
-            <%= image_tag 'art-nobkg.png', size: "100x100" %>
+          <div class="col-sm-auto text-right p-1 d-none d-sm-block">
+            <%= image_tag 'art-nobkg.png', class: "img-fluid", size: "100x100" %>
           </div>
 
         </div>
