@@ -4,3 +4,47 @@
 body {
     font-family: 'Noto Sans', "Helvetica Neue", Helvetica, sans-serif;
 }
+
+a:hover, a:focus{
+    text-decoration: none;
+}
+
+a.text-white:hover{
+    color: white;
+}
+
+a i:hover {
+    transform: translateY(-1px);
+}
+
+a i:active {
+    transform: translateY(0px);
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #6c757d;
+    transition: all .4s;
+}
+
+.search-input:focus {
+    background: transparent;
+    box-shadow: none;
+    border-bottom: 2px solid #dc3545;
+}
+
+.search-button {
+    border-radius: 50%;
+}
+
+.search-button:hover {
+    background-color: #6c757d;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.search-button:active {
+    transform: translateY(0px);
+}
