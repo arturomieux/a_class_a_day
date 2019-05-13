@@ -7,7 +7,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_template 'home/index'
     assert_select 'title', SITE_TITLE
     assert_select 'header'
-    assert_select 'section.user-menu'
     assert_select 'main'
     assert_select 'main article', 4
   end
