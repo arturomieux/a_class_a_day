@@ -1,2 +1,6 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+body {
+    font-family: 'Noto Sans', "Helvetica Neue", Helvetica, sans-serif;
+}
