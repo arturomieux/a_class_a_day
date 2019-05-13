@@ -5,6 +5,97 @@ body {
     font-family: 'Noto Sans', "Helvetica Neue", Helvetica, sans-serif;
 }
 
+
+header h1 {
+  /* Extra small devices (phones, less than 768px) */
+  font-size: 1.7rem;
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    font-size: 2.2rem;
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    font-size: 2.5rem;
+  }
+}
+
+header h2 {
+    /* Extra small devices (phones, less than 768px) */
+    font-size: 0.85rem;
+  
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+      font-size: 0.9rem;
+    }
+  
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      font-size: 1rem;
+    }
+  
+  }
+
+  header h3,h4 {
+    /* Extra small devices (phones, less than 768px) */
+    font-size: 0.8rem;
+  
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  header img {
+    /* Extra small devices (phones, less than 768px) */
+    width: 75px;
+    height: 75px;
+  
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+      width: 85px;
+      height: 85px;
+    }
+  
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  article h1 {
+    /* Extra small devices (phones, less than 768px) */
+    font-size: 1.3rem;
+  
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+    }
+  
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  article p {
+    /* Extra small devices (phones, less than 768px) */
+    font-size: 0.9rem;
+  
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+      font-size: 0.95rem;
+    }
+  
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      font-size: 1rem;
+    }
+  }
+  
+
 a:hover, a:focus{
     text-decoration: none;
 }
@@ -37,14 +128,21 @@ a i:active {
 
 .search-button {
     border-radius: 50%;
+    box-shadow: none;
+    transition: all .2s;
 }
 
 .search-button:hover {
-    background-color: #6c757d;
+    background-color: #dc3545;
     color: white;
     transform: translateY(-1px);
+    box-shadow: none;
 }
 
 .search-button:active {
     transform: translateY(0px);
+}
+
+.search-button:focus {
+    box-shadow: none;
 }
