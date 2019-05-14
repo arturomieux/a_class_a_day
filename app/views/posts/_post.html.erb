@@ -4,7 +4,7 @@
       <h1 class="font-weight-light"><%= post.title %></h1>
     </div>
     <div class="col-3 text-right">
-      <%= post.created_at %>
+      <%= time_ago_in_words(post.created_at) %> ago.
     </div>
   </header>
   <main class="col-12 text-justify">
