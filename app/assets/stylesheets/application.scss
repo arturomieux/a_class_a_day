@@ -1,69 +1,131 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+// START GLOBAL
+
 body {
     font-family: 'Noto Sans', "Helvetica Neue", Helvetica, sans-serif;
 }
 
+// No underline for links
+a:hover, a:focus{
+  text-decoration: none;
+}
+
+// END GLOBAL
+
+// START HEADER
+
+// No color change on hover for main title link
+a.text-white:hover{
+  color: white;
+}
+
+// Responsive text for h tags
 
 header h1 {
-  /* Extra small devices (phones, less than 768px) */
+  // xs
   font-size: 1.7rem;
-
-  /* Small devices (tablets, 768px and up) */
+  //sm
   @media (min-width: 768px) {
     font-size: 2.2rem;
   }
-
-  /* Medium devices (desktops, 992px and up) */
+  //md
   @media (min-width: 992px) {
     font-size: 2.5rem;
   }
 }
 
 header h2 {
-    /* Extra small devices (phones, less than 768px) */
+    //xs
     font-size: 0.85rem;
-  
-    /* Small devices (tablets, 768px and up) */
+    //sm
     @media (min-width: 768px) {
       font-size: 0.9rem;
     }
-  
-    /* Medium devices (desktops, 992px and up) */
+    //md
     @media (min-width: 992px) {
       font-size: 1rem;
     }
-  
   }
 
-  header h3,h4 {
-    /* Extra small devices (phones, less than 768px) */
-    font-size: 0.8rem;
-  
-    /* Small devices (tablets, 768px and up) */
-    @media (min-width: 768px) {
-      font-size: 0.9rem;
-    }
+header h3,h4 {
+  //xs
+  font-size: 0.8rem;
+  //sm
+  @media (min-width: 768px) {
+    font-size: 0.9rem;
   }
+}
 
-  header img {
-    /* Extra small devices (phones, less than 768px) */
-    width: 75px;
-    height: 75px;
-  
-    /* Small devices (tablets, 768px and up) */
-    @media (min-width: 768px) {
-      width: 85px;
-      height: 85px;
-    }
-  
-    /* Medium devices (desktops, 992px and up) */
-    @media (min-width: 992px) {
-      width: 100px;
-      height: 100px;
-    }
+// Responsive avatar size
+header img {
+  //xs
+  width: 75px;
+  height: 75px;
+  //sm
+  @media (min-width: 768px) {
+    width: 85px;
+    height: 85px;
   }
+  //md
+  @media (min-width: 992px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+// Contact icon movement on hover adn click
+header a i:hover {
+  transform: translateY(-1px);
+}
+
+header a i:active {
+  transform: translateY(0px);
+}
+
+// END HEADER
+
+// START SEARCH BAR
+
+.search-input {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #6c757d;
+  transition: all .4s;
+}
+
+.search-input:focus {
+  background: transparent;
+  box-shadow: none;
+  border-bottom: 2px solid #dc3545;
+}
+
+.search-button {
+  border-radius: 50%;
+  box-shadow: none;
+  transition: all .2s;
+}
+
+.search-button:hover {
+  background-color: #dc3545;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+.search-button:active {
+  transform: translateY(0px);
+}
+
+.search-button:focus {
+  box-shadow: none;
+}
+
+// END SEARCH BAR
+
+// START POST
 
   article h1 {
     /* Extra small devices (phones, less than 768px) */
@@ -95,54 +157,4 @@ header h2 {
     }
   }
   
-
-a:hover, a:focus{
-    text-decoration: none;
-}
-
-a.text-white:hover{
-    color: white;
-}
-
-a i:hover {
-    transform: translateY(-1px);
-}
-
-a i:active {
-    transform: translateY(0px);
-}
-
-.search-input {
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    border-bottom: 2px solid #6c757d;
-    transition: all .4s;
-}
-
-.search-input:focus {
-    background: transparent;
-    box-shadow: none;
-    border-bottom: 2px solid #dc3545;
-}
-
-.search-button {
-    border-radius: 50%;
-    box-shadow: none;
-    transition: all .2s;
-}
-
-.search-button:hover {
-    background-color: #dc3545;
-    color: white;
-    transform: translateY(-1px);
-    box-shadow: none;
-}
-
-.search-button:active {
-    transform: translateY(0px);
-}
-
-.search-button:focus {
-    box-shadow: none;
-}
+// END POST
