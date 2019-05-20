@@ -8,9 +8,9 @@ module ApplicationHelper
       'yesterday'
     elsif time >= Time.now.beginning_of_week
       'this week'
-    elsif time >= Time.now.days_ago(7).beginning_of_week
+    elsif time >= Time.now.weeks_ago(1).beginning_of_week
       'last week'
-    elsif time >= Time.now.days_ago.beginning_of_week
+    elsif time >= Time.now.weeks_ago(4).beginning_of_week
       "#{weeks} weeks ago"
     elsif time >= Time.now.days_ago.beginning_of_week
       "#{months} months ago"
