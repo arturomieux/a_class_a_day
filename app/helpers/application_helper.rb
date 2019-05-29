@@ -10,12 +10,13 @@ module ApplicationHelper
       'this week'
     elsif time >= Time.now.weeks_ago(1).beginning_of_week
       'last week'
-    elsif time >= Time.now.weeks_ago(4).beginning_of_week
-      "#{weeks} weeks ago"
-    elsif time >= Time.now.days_ago.beginning_of_week
-      "#{months} months ago"
-    elsif time >= Time.now.days_ago.beginning_of_week
-      "#{years} years ago"
+    # "#{weeks} weeks ago"
+    elsif time >= Time.now.months_ago(1).beginning_of_month
+    'last month'
+    # "#{months} months ago"
+    elsif time >= Time.now.years_ago(1).beginning_of_year
+    'last year'
+    # "#{years} years ago"
     end
 
   end
