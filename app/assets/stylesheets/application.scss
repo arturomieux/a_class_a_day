@@ -125,6 +125,18 @@ header a i:active {
 
 // END SEARCH BAR
 
+// START CONTROL BAR
+ 
+#control-bar a i:hover {
+  transform: translateY(-1px);
+}
+
+#control-bar a i:active {
+  transform: translateY(0px);
+}
+
+// END CONTROL BAR
+
 // START POST
 
   article h1 {
