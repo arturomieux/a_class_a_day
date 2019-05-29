@@ -7,10 +7,16 @@
       <%= time_ago_in_words(post.created_at) %> ago.
     </div>
   </header>
-  <main class="col-12 text-justify">
-    <p><%= post.description %></p>
-  </main>
-  <div class="text-right pr-2 pb-2">
-    <%= link_to "more\u2026", '#', class: "text-danger" %>
-  </div>
+  <% if local_assigns[:preview] %>
+    <main class="col-12 text-justify">
+      <p><%= post.description %></p>
+    </main>
+    <div class="text-right pr-2 pb-2">
+      <%= link_to "more\u2026", post, class: "text-danger" %>
+    </div>
+  <% else %>
+    <main class="col-12 text-justify">
+      <p><%= post.content %></p>
+    </main>
+  <% end %>
 </article>
